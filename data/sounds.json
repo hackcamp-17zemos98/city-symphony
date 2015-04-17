@@ -1,18 +1,30 @@
 {
     "1": {
         "name": "Lorem ipsum",
+        "video": "Video title 1",
+        "url": "https://vimeo.com/channels/871426",
+        "frame": "http://lorempixel.com/100/60/",
         "file": "/audio/s1.mp3"
     },
     "2": {
         "name": "Lorem ipsum 2",
+        "video": "Video title 1",
+        "url": "https://vimeo.com/channels/871426",
+        "frame": "http://lorempixel.com/100/60/",
         "file": "/audio/s2.mp3"
     },
     "3": {
         "name": "Lorem ipsum 3",
+        "video": "Video title 1",
+        "url": "https://vimeo.com/channels/871426",
+        "frame": "http://lorempixel.com/100/60/",
         "file": "/audio/s3.mp3"
     },
     "4": {
         "name": "Lorem ipsum 4",
+        "video": "Video title 1",
+        "url": "https://vimeo.com/channels/871426",
+        "frame": "http://lorempixel.com/100/60/",
         "file": "/audio/s4.mp3"
     }
 }

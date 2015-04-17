@@ -1,14 +1,19 @@
 define(['jquery'], function($) {
     var Player = {
         init: function(setup) {
+            var self = this;
+
             this.$element = setup.$element;
             //TODO move this to app config
             this.$ambients = this.$element.find('.ambients');
             this.$slots = this.$element.find('.slots');
 
+            this.playing = false;
 
             this.$preview = this.$element.find('.preview');
             this.$save = this.$element.find('.save');
+
+            this.$player = this.$element.find('.audio-preview');
 
             this.sounds = setup.sounds;
             this.backgroundSounds = setup.backgroundSounds;
@@ -16,8 +21,12 @@ define(['jquery'], function($) {
             this.slots = 10;
             this.defaultSlotDuration = 5;
 
-            this.$preview.on('click', this.preview);
-            this.$save.on('click', this.save);
+            this.$preview.on('click', function(e) {
+                self.preview();
+            });
+            this.$save.on('click', function(e) {
+
+            });
 
             return this;
         },
@@ -50,10 +59,20 @@ define(['jquery'], function($) {
             //
 
             var clearSlot = function(e) {
-                var $this = $(this);
-                $this.parent().data('sound', null);
-                $this.parent().removeClass().addClass('slot');
-                self.checkFinished();
+                if(!self.playing) {
+                    var $this = $(this);
+
+                    var $slotBox = $this.parents('.slot-box');
+                    var $slot = $slotBox.find('.slot');
+                    var $slotInfo = $slotBox.find('.slot-info');
+
+                    $slot.data('sound', null);
+                    $slot.removeClass().addClass('slot');
+
+                    $slotInfo.empty();
+
+                    self.checkFinished();
+                }
 
                 e.stopPropagation();
             };
@@ -62,19 +81,33 @@ define(['jquery'], function($) {
                 $slot.droppable({
                     hoverClass: 'drop-active',
                     drop: function(event, ui) {
-                        var $this = $(this);
-                        var $drop = $(ui.draggable);
+                        if(!self.playing) {
+                            var $this = $(this);
+                            var $slotInfo = $this.parents('.slot-box').find('.slot-info').empty();
 
-                        $this.data('sound', $drop.data('sound'));
-                        $this.addClass($drop.data('mood'));
+                            var $drop = $(ui.draggable);
 
-                        self.checkFinished();
+                            var soundInfo = $drop.data('sound');
+
+                            $this.data('sound', soundInfo);
+                            $this.addClass($drop.data('mood'));
+
+                            var $link = $('<a>').attr('href', soundInfo.url).attr('target', '_blank');
+
+                            var $title = $('<p>').html(soundInfo.video).appendTo($link);
+                            var $frame = $('<img>').attr('src', soundInfo.frame).appendTo($link);
+
+                            $link.appendTo($slotInfo);
+
+                            self.checkFinished();
+                        }
                     }
                 });
             };
 
             for (var i = 0; i < this.slots; i++) {
-                var $slotBox = $('<div>');
+                var $slotBox = $('<div>')
+                    .addClass('slot-box');
 
                 var $slot = $('<div>')
                     .addClass('slot');
@@ -98,30 +131,62 @@ define(['jquery'], function($) {
                 $slotBox.appendTo(self.$slots);
             }
         },
-        serialize: function() {
-            var result = [];
-            this.result = null;
-
-            var $activeSlots = this.$slots.find('.slot').filter(function(i, slot) {
-                var $slot = $(slot);
-
-                if($slot.data('sound')) {
-                    result.push($slot.data('sound'));
-                }
+        getActive: function() {
+            return this.$slots.find('.slot').filter(function(i, slot) {
+                return $(slot).data('sound') !== undefined;
             });
-
-            this.result = result;
+        },
+        serialize: function() {
+            return this.getActive().map(function(i, slot) {
+                return $(slot).data('sound');
+            }).get();
         },
         checkFinished: function() {
-            this.serialize();
-
-            if(this.result.length === 10) {
+            if(this.serialize().length === 10) {
                 this.$save.prop('disabled', false);
             } else {
                 this.$save.prop('disabled', true);
             }
         },
         preview: function() {
+            var self = this;
+
+            if(!self.playing) {
+                var $active = this.getActive();
+                var current = 0;
+
+                var playBlock = function(i) {
+                    i = i || 0;
+
+                    if(i < $active.length) {
+                        var $current = $($active[i]);
+                        var currentData = $current.data('sound');
+
+                        $active.removeClass('drop-active');
+                        $current.addClass('drop-active');
+
+                        self.$player.attr('src', currentData.file);
+
+                        var player = self.$player.get(0);
+                        player.currentTime = 0;
+                        player.play();
+
+                        self.$player.one('ended', function() {
+                            current++;
+                            playBlock(current);
+                        });
+                    } else {
+                        self.playing = false;
+                        $active.removeClass('drop-active');
+
+                        self.$preview.prop('disabled', false);
+                    }
+
+                };
+                self.playing = true;
+                self.$preview.prop('disabled', true);
+                playBlock();
+            }
 
         }
     };
