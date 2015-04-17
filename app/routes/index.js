@@ -23,6 +23,9 @@ var routeManager = function(env) {
     // Index
     router.get('/', controllers.index);
 
+    // Post a city symphony
+    router.post('/', controllers.postSymphony);
+
     // Help
     router.get('/help', controllers.help);
 

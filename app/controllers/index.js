@@ -12,6 +12,9 @@ module.exports = {
             greeting: 'Hello from homepage'
         });
     },
+    postSymphony: function(req, res, next) {
+        console.log("It works");
+    },
     help: function(req, res, next) {
         res.render('help', {
             jsApp: 'help',
