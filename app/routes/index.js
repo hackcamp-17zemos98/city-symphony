@@ -6,6 +6,7 @@ var routeManager = function(env) {
     var router = express.Router();
 
     var controllers = require('../controllers');
+    var data = require('../../data');
 
     /**
      * Initial middleware
@@ -23,11 +24,19 @@ var routeManager = function(env) {
     // Index
     router.get('/', controllers.index);
 
+
     // Post a city symphony
     router.post('/', controllers.postSymphony);
 
     // Help
     router.get('/help', controllers.help);
+
+    //JSON Static
+    Object.keys(data).forEach(function(d) {
+        router.get('/data/' + d +'.json', function(req, res) {
+            res.json(data[d]);
+        });
+    });
 
     /**
      * Catchers
