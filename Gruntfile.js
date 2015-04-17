@@ -60,9 +60,6 @@ module.exports = function(grunt) {
         requirejs: {
             compile: {
                 options: {
-                    // baseUrl: './app/assets/web/js/',
-                    // mainConfigFile : './app/assets/web/js/main.js',
-                    // dir: './public/assets/web/js',
                     baseUrl: './static/src/js/',
                     mainConfigFile: './static/src/js/main.js',
                     dir: './static/dist/js/',
