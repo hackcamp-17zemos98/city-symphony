@@ -5,11 +5,10 @@ var helpers = require('../lib/helpers');
 module.exports = {
     index: function(req, res, next) {
         res.render('home', {
-            jsApp: 'index',
+            jsApp: 'builder',
             meta: {
-                title: 'Homepage'
-            },
-            greeting: 'Hello from homepage'
+                title: 'City Symphony'
+            }
         });
     },
     help: function(req, res, next) {
