@@ -11,6 +11,21 @@ module.exports = {
             }
         });
     },
+    getSymphony: function(req, res, next) {
+        var itemdata = require('../model/items');
+        itemdata.itemcontent(req.params.id, function(err, data) {
+                if (err) {
+                    return next(err);
+                }
+                res.render('item', {
+                    jsApp: 'builder',
+                    meta: {
+                        title: 'City Symphony'
+                    },
+                    itemcontent: data
+                });
+        });
+    },
     postSymphony: function(req, res, next) {
         console.log("It works");
     },

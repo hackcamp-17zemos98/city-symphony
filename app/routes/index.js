@@ -28,6 +28,8 @@ var routeManager = function(env) {
     // Post a city symphony
     router.post('/', controllers.postSymphony);
 
+    router.get('/symphony/:id', controllers.getSymphony);
+
     // Help
     router.get('/help', controllers.help);
 
