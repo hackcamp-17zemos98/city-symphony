@@ -9,10 +9,12 @@ require.config({
          * Modules
          */
         'shared': 'modules/shared',
+        'Canvas': 'modules/Canvas',
+        'Player': 'modules/Player',
         /**
          * Apps
          */
-        'index': 'app/index'
+        'builder': 'app/builder'
     },
     shim: {
         "bootstrap": {

@@ -109,12 +109,6 @@ module.exports = function(grunt) {
                 ],
                 tasks: ['sync', 'concat']
             }
-        },
-        notify_hooks: {
-            options: {
-                enabled: true,
-                max_jshint_notifications: 5
-            }
         }
     });
 
