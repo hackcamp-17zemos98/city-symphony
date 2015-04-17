@@ -1,0 +1,6 @@
+node_modules
+config/local.settings.js
+.DS_Store
+static/src/vendor
+static/dist
+.sass-cache
