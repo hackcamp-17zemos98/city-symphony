@@ -1,12 +1,12 @@
-#Install
+# Install
 
 1. ```npm install```
 2. ```bower install```
 
-#Develop
+# Develop
 
-```grunt dev```
+Execute: ```grunt dev``` and code.
 
-#Build
-```grunt```
+# Build (in production)
 
+Execute: ```grunt```
