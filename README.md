@@ -5,9 +5,8 @@
 
 # Develop
 
-```grunt dev```
+Execute: ```grunt dev``` and code.
 
-# Build
+# Build (in production)
 
-
-```grunt```
+Execute: ```grunt```
