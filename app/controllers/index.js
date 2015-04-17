@@ -12,8 +12,8 @@ module.exports = {
         });
     },
     getSymphony: function(req, res, next) {
-        var itemdata = require('../model/items');
-        itemdata.itemcontent(req.params.id, function(err, data) {
+        var itemd = require('../model/items');
+        itemd.getitem(req.params.id, function(err, item) {
                 if (err) {
                     return next(err);
                 }
@@ -22,12 +22,19 @@ module.exports = {
                     meta: {
                         title: 'City Symphony'
                     },
-                    itemcontent: data
+                    item: item
                 });
         });
     },
     postSymphony: function(req, res, next) {
-        console.log("It works");
+        var itemd = require('../model/items');
+        var content = 'F***ing demo content goes here!!!';
+        itemd.saveitem(content, function(err, item) {
+                if (err) {
+                    return next(err);
+                }
+                console.log('The item ID is: ' + item._id);
+        });
     },
     help: function(req, res, next) {
         res.render('help', {
