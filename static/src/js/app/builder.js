@@ -2,20 +2,73 @@ require(['jquery', 'Canvas', 'Player'], function($, Canvas, Player) {
 
     var App = {
         init: function(setup) {
+            var self = this;
+
             this.setup = setup;
             this.data = setup.data;
-            this.element = setup.element;
+            this.elements = setup.elements;
+
+            this.$element = $(this.elements.app);
 
             this.canvas = Object.create(Canvas);
             this.player = Object.create(Player);
+
+            var dataCache = {};
+
+            $.when(
+                $.get(this.data.sounds, function(sounds) {
+                    dataCache.sounds = sounds;
+                }),
+                $.get(this.data.backgroundSounds, function(backgroundSounds) {
+                    dataCache.backgroundSounds = backgroundSounds;
+                }),
+                $.get(this.data.boxes, function(boxes) {
+                    dataCache.boxes = boxes;
+
+                })
+            ).then(function() {
+
+                //Init canvas
+                self.canvas.init({
+                        $element: self.$element.find(self.elements.canvas),
+                        boxes: dataCache.boxes,
+                        sounds: dataCache.sounds
+                    })
+                    .build();
+
+                //Init player
+                self.player.init({
+                        $element: self.$element.find(self.elements.player),
+                        sounds: dataCache.sounds,
+                        backgroundSounds: dataCache.backgroundSounds
+                    })
+                    .build();
+            });
+
+
         }
     };
 
     App.init({
         data: {
-            sounds: '/data/sounds.json'
+            sounds: '/data/sounds.json',
+            backgroundSounds: 'data/rhythm.json',
+            boxes: 'data/boxes.json'
         },
-        'element': '#app'
+        'elements': {
+            app: '.app',
+            canvas: '.canvas',
+            player: '.player'
+        }
     });
 
 });
+
+// Canvas (element, boxes, sounds, dropCallback)
+//  X build - Create elements
+
+// Player (element, sounds, backgroundSounds)
+//  X build - create elements
+//  X checkFinished - checks if the player is full and show/hide the share buttons
+//  X serialize - generate a json to send to server
+//  - preview - plays the sounds

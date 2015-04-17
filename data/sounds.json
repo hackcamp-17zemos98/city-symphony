@@ -1,3 +1,18 @@
 {
-    "hello": "world"
+    "1": {
+        "name": "Lorem ipsum",
+        "file": "/audio/s1.mp3"
+    },
+    "2": {
+        "name": "Lorem ipsum 2",
+        "file": "/audio/s2.mp3"
+    },
+    "3": {
+        "name": "Lorem ipsum 3",
+        "file": "/audio/s3.mp3"
+    },
+    "4": {
+        "name": "Lorem ipsum 4",
+        "file": "/audio/s4.mp3"
+    }
 }

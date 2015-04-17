@@ -5,6 +5,7 @@ require.config({
          * Components
          */
         'jquery': '../vendor/jquery/dist/jquery',
+        'jquery-ui': '../vendor/jquery-ui/jquery-ui',
         /**
          * Modules
          */
@@ -17,12 +18,15 @@ require.config({
         'builder': 'app/builder'
     },
     shim: {
-        "bootstrap": {
-            "deps": ['jquery']
+        'bootstrap': {
+            'deps': ['jquery']
+        },
+        'jquery-ui': {
+            'deps': ['jquery']
         }
     }
 });
 
 require(['jquery', 'shared'], function() {
-    console.log('hello from main');
+
 });

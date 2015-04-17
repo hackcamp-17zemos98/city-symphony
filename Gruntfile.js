@@ -10,6 +10,12 @@ module.exports = function(grunt) {
                 cwd: 'static/src/img/',
                 src: ['**'],
                 dest: 'static/dist/img/'
+            },
+            audio: {
+                expand: true,
+                cwd: 'static/src/audio/',
+                src: ['**'],
+                dest: 'static/dist/audio/'
             }
         },
         sync: {
@@ -28,6 +34,13 @@ module.exports = function(grunt) {
                     cwd: 'static/src/img/',
                     src: '**',
                     dest: 'static/dist/img/'
+                }]
+            },
+            audio: {
+                files: [{
+                    cwd: 'static/src/audio/',
+                    src: '**',
+                    dest: 'static/dist/audio/'
                 }]
             },
             vendor: {
@@ -87,7 +100,7 @@ module.exports = function(grunt) {
         },
         watch: {
             express: {
-                files: ['<%= jshint.app.src %>', '**/*.hbs', '!Gruntfile.js', '!**/static/**'],
+                files: ['<%= jshint.app.src %>', '**/*.hbs', '!Gruntfile.js', '!**/static/**', 'data/**.json'],
                 tasks: ['express:dev'],
                 options: {
                     spawn: false
@@ -109,20 +122,32 @@ module.exports = function(grunt) {
                 ],
                 tasks: ['sync', 'concat']
             }
-        }
+        },
+        notify_hooks: {
+            options: {
+              enabled: true,
+              max_jshint_notifications: 5,
+              title: "City Symphony",
+              success: true,
+              duration: 3
+            }
+          }
     });
+
 
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-express-server');
-    grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-sync');
+    grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-contrib-concat');
+
+    grunt.task.run('notify_hooks');
 
     grunt.registerTask('dev', ['jshint', 'clean', 'sass', 'sync', 'concat', 'express', 'watch']);
     grunt.registerTask('default', ['jshint', 'clean', 'sass', 'copy', 'requirejs']);

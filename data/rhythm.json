@@ -1,0 +1,10 @@
+[
+    {
+        "file": "/audio/background/bgsound_1.mp3",
+        "name": "Ambiente 1"
+    },
+    {
+        "file": "/audio/background/bgsound_2.mp3",
+        "name": "Ambiente 2"
+    }
+]

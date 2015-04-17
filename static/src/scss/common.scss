@@ -1,0 +1,44 @@
+.box {
+    width: 100px;
+    height: 200px;
+    background: #eee;
+    float: left;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.drop-active {
+    border: 3px solid #999;
+}
+
+
+.slot{
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+    float: left;
+    margin: 5px;
+}
+
+.sound-box {
+    width: 200px;
+    display: inline-box;
+    padding: 10px;
+}
+
+.sad {
+    background-color: red;
+}
+.normal {
+    background-color: orange;
+}
+.happy {
+    background-color: blue;
+}
+.happier {
+    background-color: green;
+}
+
+.hidden {
+    display: none;
+}
