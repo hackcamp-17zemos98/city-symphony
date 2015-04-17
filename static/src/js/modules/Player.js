@@ -66,6 +66,7 @@ define(['jquery'], function($) {
                     var $slot = $slotBox.find('.slot');
                     var $slotInfo = $slotBox.find('.slot-info');
 
+                    console.log($slot);
                     $slot.data('sound', null);
                     $slot.removeClass().addClass('slot');
 
@@ -91,11 +92,12 @@ define(['jquery'], function($) {
 
                             $this.data('sound', soundInfo);
                             $this.addClass($drop.data('mood'));
+                            $this.addClass('full');
 
                             var $link = $('<a>').attr('href', soundInfo.url).attr('target', '_blank');
 
-                            var $title = $('<p>').html(soundInfo.video).appendTo($link);
                             var $frame = $('<img>').attr('src', soundInfo.frame).appendTo($link);
+                            var $title = $('<p>').html(soundInfo.video).appendTo($link);
 
                             $link.appendTo($slotInfo);
 
@@ -110,7 +112,8 @@ define(['jquery'], function($) {
                     .addClass('slot-box');
 
                 var $slot = $('<div>')
-                    .addClass('slot');
+                    .addClass('slot')
+                    .data('sound', null);
 
                 manageDrop($slot);
 
@@ -120,8 +123,7 @@ define(['jquery'], function($) {
                     .on('click', clearSlot);
 
                 var $slotInfo = $('<div>')
-                    .addClass('slot-info')
-                    .html('slot info');
+                    .addClass('slot-info');
 
                 $close.appendTo($slot);
 
@@ -133,7 +135,7 @@ define(['jquery'], function($) {
         },
         getActive: function() {
             return this.$slots.find('.slot').filter(function(i, slot) {
-                return $(slot).data('sound') !== undefined;
+                return $(slot).data('sound') !== null;
             });
         },
         serialize: function() {

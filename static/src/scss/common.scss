@@ -20,6 +20,14 @@
     margin: 5px;
 }
 
+.clear-slot {
+    display: none;
+}
+
+.slot.full .clear-slot {
+    display: inline;
+}
+
 .sound-box {
     width: 200px;
     display: inline-box;
