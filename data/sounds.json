@@ -54,7 +54,7 @@
         "url": "https://vimeo.com/channels/871416/39228810",
         "frame": "/audio/boxes/housing/CopsaMica04Housing.jpg",
         "file": "/audio/boxes/housing/CopsaMica04Housing.mp3"
-    },    
+    },
     "9": {
         "name": "Gary McQuiggin",
         "video": "Garden City with Mark Astronaut",
@@ -139,5 +139,5 @@
         "frame": "/audio/boxes/work/MobileInnerPeace04Work.jpg",
         "file": "/audio/boxes/work/MobileInnerPeace04Work.mp3"
     }
-    
+
 }
