@@ -2,46 +2,46 @@
     "transport": {
         "img": "/img/transport.png",
         "sounds": {
-            "sad" : 1,
-            "normal" : 2,
-            "happy": 3,
-            "happier": 4
-        }
-    },
-    "people": {
-        "img": "/img/people.png",
-        "sounds": {
-            "sad" : 1,
-            "normal" : 2,
-            "happy": 3,
-            "happier": 4
+            "sad" : 4,
+            "normal" : 3,
+            "happy": 2,
+            "happier": 1
         }
     },
     "housing": {
         "img": "/img/housing.png",
         "sounds": {
-            "sad" : 1,
-            "normal" : 2,
-            "happy": 3,
-            "happier": 4
+            "sad" : 8,
+            "normal" : 7,
+            "happy": 6,
+            "happier": 5
         }
     },
     "nature": {
         "img": "/img/nature.png",
         "sounds": {
-            "sad" : 1,
-            "normal" : 2,
-            "happy": 3,
-            "happier": 4
+            "sad" : 12,
+            "normal" : 11,
+            "happy": 10,
+            "happier": 9
+        }
+    },
+    "people": {
+        "img": "/img/people.png",
+        "sounds": {
+            "sad" : 16,
+            "normal" : 15,
+            "happy": 14,
+            "happier": 13
         }
     },
     "work": {
         "img": "/img/work.png",
         "sounds": {
-            "sad" : 1,
-            "normal" : 2,
-            "happy": 3,
-            "happier": 4
+            "sad" : 20,
+            "normal" : 19,
+            "happy": 18,
+            "happier": 17
         }
     }
 }

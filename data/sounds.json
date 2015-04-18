@@ -1,30 +1,143 @@
 {
     "1": {
-        "name": "Lorem ipsum",
-        "video": "Video title 1",
-        "url": "https://vimeo.com/channels/871426",
-        "frame": "http://lorempixel.com/100/60/",
-        "file": "/audio/s1.mp3"
+        "name": "ZPOK",
+        "video": "pArt",
+        "url": "https://vimeo.com/91838504",
+        "frame": "/audio/boxes/transport/pArt01.jpg",
+        "file": "/audio/boxes/transport/pArt01.mp3"
     },
     "2": {
-        "name": "Lorem ipsum 2",
-        "video": "Video title 1",
-        "url": "https://vimeo.com/channels/871426",
-        "frame": "http://lorempixel.com/100/60/",
-        "file": "/audio/s2.mp3"
+        "name": "Ula Klimek",
+        "video": "CopsaMica",
+        "url": "https://vimeo.com/channels/871416/39228810",
+        "frame": "/audio/boxes/transport/CopsaMica02Transport.jpg",
+        "file": "/audio/boxes/transport/CopsaMica02Transport.mp3"
     },
     "3": {
-        "name": "Lorem ipsum 3",
-        "video": "Video title 1",
-        "url": "https://vimeo.com/channels/871426",
-        "frame": "http://lorempixel.com/100/60/",
-        "file": "/audio/s3.mp3"
+        "name": "Das Graue Wunder. Mathieu Tremblin, Vladimír Turner",
+        "video": "Process",
+        "url": "https://vimeo.com/channels/871416/84996708",
+        "frame": "/audio/boxes/transport/Process03.jpg",
+        "file": "/audio/boxes/transport/Process03.mp3"
     },
     "4": {
-        "name": "Lorem ipsum 4",
-        "video": "Video title 1",
-        "url": "https://vimeo.com/channels/871426",
-        "frame": "http://lorempixel.com/100/60/",
-        "file": "/audio/s4.mp3"
+        "name": "MODE Istanbul",
+        "video": "MobileInnerPeace",
+        "url": "https://vimeo.com/channels/871419/68856140",
+        "frame": "/audio/boxes/transport/MobileInnerPeace04.jpg",
+        "file": "/audio/boxes/transport/MobileInnerPeace04.mp3"
+    },
+    "5": {
+        "name": "MODE Istanbul",
+        "video": "MobileInnerPeace",
+        "url": "https://vimeo.com/channels/871419/68856140",
+        "frame": "/audio/boxes/housing/MobileInnerPeace01Housing.jpg",
+        "file": "/audio/boxes/housing/MobileInnerPeace01Housing.mp3"
+    },
+    "6": {
+        "name": "Nuno Pessoa",
+        "video": "Noncity",
+        "url": "https://vimeo.com/channels/871419/9445080",
+        "frame": "/audio/boxes/housing/Noncity02.jpg",
+        "file": "/audio/boxes/housing/Noncity02.mp3"
+    },
+    "7": {
+        "name": "Creative Initiatives",
+        "video": "Videonotations",
+        "url": "https://vimeo.com/channels/871416/27191628",
+        "frame": "/audio/boxes/housing/Videonotations03.jpg",
+        "file": "/audio/boxes/housing/Videonotations03.mp3"
+    },
+    "8": {
+        "name": "Ula Klimek",
+        "video": "CopsaMica",
+        "url": "https://vimeo.com/channels/871416/39228810",
+        "frame": "/audio/boxes/housing/CopsaMica04Housing.jpg",
+        "file": "/audio/boxes/housing/CopsaMica04Housing.mp3"
+    },    
+    "9": {
+        "name": "Gary McQuiggin",
+        "video": "GardenCitywithMarkAstronaut",
+        "url": "https://vimeo.com/channels/871419/29047488",
+        "frame": "/audio/boxes/nature/GardenCitywithMarkAstronaut01.jpg",
+        "file": "/audio/boxes/nature/GardenCitywithMarkAstronaut01.mp3"
+    },
+    "10": {
+        "name": "Ula Klimek",
+        "video": "CopsaMica",
+        "url": "https://vimeo.com/channels/871416/39228810",
+        "frame": "/audio/boxes/nature/CopsaMica02Nature.jpg",
+        "file": "/audio/boxes/nature/CopsaMica02Nature.mp3"
+    },
+    "11": {
+        "name": "Italo Rondinella",
+        "video": "THETREESOFGEZI",
+        "url": "https://vimeo.com/channels/871426/91860616",
+        "frame": "/audio/boxes/nature/THETREESOFGEZI03.jpg",
+        "file": "/audio/boxes/nature/THETREESOFGEZI03.mp3"
+    },
+    "12": {
+        "name": "Jose Manuel Segovia Collado",
+        "video": "Elpatiodemicasa",
+        "url": "https://vimeo.com/channels/871422/44234029",
+        "frame": "/audio/boxes/nature/Elpatiodemicasa04.jpg",
+        "file": "/audio/boxes/nature/Elpatiodemicasa04.mp3"
+    },
+    "13": {
+        "name": "Nazli Kaya",
+        "video": "ZlinSoup",
+        "url": "https://vimeo.com/channels/871416/16666217",
+        "frame": "/audio/boxes/people/ZlinSoup01.jpg",
+        "file": "/audio/boxes/people/ZlinSoup01.mp3"
+    },
+    "14": {
+        "name": "Ermin Kadic",
+        "video": "AWintersTaleOfSpring",
+        "url": "https://vimeo.com/channels/871426/91868125",
+        "frame": "/audio/boxes/people/AWintersTaleOfSpring02.jpg",
+        "file": "/audio/boxes/people/AWintersTaleOfSpring02.mp3"
+    },
+    "15": {
+        "name": "MODE Istanbul",
+        "video": "DortMevsim",
+        "url": "https://vimeo.com/channels/871419/45780448",
+        "frame": "/audio/boxes/people/DortMevsim03.jpg",
+        "file": "/audio/boxes/people/DortMevsim03.mp3"
+    },
+    "16": {
+        "name": "Alessandra Cataleta",
+        "video": "TheProtester",
+        "url": "https://vimeo.com/46928104",
+        "frame": "/audio/boxes/people/TheProtester04.jpg",
+        "file": "/audio/boxes/people/TheProtester04.mp3"
+    },
+    "17": {
+        "name": "Matthew Kay",
+        "video": "OnSite",
+        "url": "https://vimeo.com/channels/871419/60740736",
+        "frame": "/audio/boxes/work/OnSite01.jpg",
+        "file": "/audio/boxes/work/OnSite01.mp3"
+    },
+    "18": {
+        "name": "Ula Klimek",
+        "video": "CopsaMica",
+        "url": "https://vimeo.com/channels/871416/39228810",
+        "frame": "/audio/boxes/work/CopsaMica02Work.jpg",
+        "file": "/audio/boxes/work/CopsaMica02Work.mp3"
+    },
+    "19": {
+        "name": "Daghan Celayir",
+        "video": "TheRebellionoftheMachines",
+        "url": "https://vimeo.com/channels/871416/16662749",
+        "frame": "/audio/boxes/work/TheRebellionoftheMachines03.jpg",
+        "file": "/audio/boxes/work/TheRebellionoftheMachines03.mp3"
+    },
+    "20": {
+        "name": "MODE Istanbul",
+        "video": "MobileInnerPeace",
+        "url": "https://vimeo.com/channels/871419/68856140",
+        "frame": "/audio/boxes/work/MobileInnerPeace04Work.jpg",
+        "file": "/audio/boxes/work/MobileInnerPeace04Work.mp3"
     }
+    
 }
