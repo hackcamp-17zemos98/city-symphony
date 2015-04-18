@@ -1,5 +1,5 @@
 require.config({
-    baseUrl: 'js',
+    baseUrl: '/js',
     paths: {
         /**
          * Components
@@ -15,7 +15,8 @@ require.config({
         /**
          * Apps
          */
-        'builder': 'app/builder'
+        'builder': 'app/builder',
+        'preview': 'app/preview'
     },
     shim: {
         'bootstrap': {

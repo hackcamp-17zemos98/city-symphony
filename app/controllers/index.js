@@ -1,5 +1,6 @@
 var settings = require('../../config/settings');
 var helpers = require('../lib/helpers');
+        var itemd = require('../model/items');
 
 
 module.exports = {
@@ -7,12 +8,11 @@ module.exports = {
         res.render('home', {
             jsApp: 'builder',
             meta: {
-                title: 'City Symphony'
+                title: 'Build a City Symphony'
             }
         });
     },
     getSymphony: function(req, res, next) {
-        var itemd = require('../model/items');
         itemd.getitem(req.params.id, function(err, item) {
                 if (err) {
                     return next(err);
@@ -21,15 +21,15 @@ module.exports = {
         });
     },
     shareSymphony: function(req, res, next) {
-        res.render('item', {
-            jsApp: 'builder',
+        res.render('preview', {
+            jsApp: 'preview',
             meta: {
-                title: 'City Symphony'
-            }
+                title: 'Your City Symphony'
+            },
+            id: req.params.id
         });
     },
     postSymphony: function(req, res, next) {
-        var itemd = require('../model/items');
         var content = JSON.stringify(req.body);
         itemd.saveitem(content, function(err, item) {
                 if (err) {
