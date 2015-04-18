@@ -17,13 +17,15 @@ module.exports = {
                 if (err) {
                     return next(err);
                 }
-                res.render('item', {
-                    jsApp: 'builder',
-                    meta: {
-                        title: 'City Symphony'
-                    },
-                    item: item
-                });
+                res.json({'symphony': item.content});
+        });
+    },
+    shareSymphony: function(req, res, next) {
+        res.render('item', {
+            jsApp: 'builder',
+            meta: {
+                title: 'City Symphony'
+            }
         });
     },
     postSymphony: function(req, res, next) {
