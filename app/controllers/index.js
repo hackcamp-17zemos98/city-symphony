@@ -37,8 +37,15 @@ module.exports = {
                 if (err) {
                     return next(err);
                 }
-
                 res.json({'id': item._id});
+        });
+    },
+    numSymphonies: function(req, res, next) {
+        itemd.countitems(function(err, n) {
+                if (err) {
+                    return next(err);
+                }
+                res.json({'numsymphonies': n});
         });
     },
     help: function(req, res, next) {

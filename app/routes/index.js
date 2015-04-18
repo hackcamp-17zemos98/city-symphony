@@ -32,6 +32,8 @@ var routeManager = function(env) {
 
     router.get('/get/:id', controllers.getSymphony);
 
+    router.get('/numsymphonies', controllers.numSymphonies);
+
     // Help
     router.get('/help', controllers.help);
 
