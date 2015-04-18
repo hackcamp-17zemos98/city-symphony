@@ -14,7 +14,7 @@
 
                 width: 100%;
                 float: left;
-                
+                background-color: red;
 
                 .box {
                     float: left;
@@ -45,9 +45,26 @@
 
     .player {
         width: 100%;
-        float: left;
         background-color: #333;
 
+        .timeline {
+            float: left;
+            width: 100%;
+        }
+        footer {
+            width: 100%;
+            text-align: center;
+
+            .sources {
+                float: left;
+            }
+            .background-sounds {
+                
+            }
+            .action {
+                float: right;
+            }
+        }
     }
 
 }
