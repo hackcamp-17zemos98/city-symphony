@@ -14,6 +14,7 @@ define(['jquery'], function($) {
             this.$save = this.$element.find('.save');
 
             this.$player = this.$element.find('.audio-preview');
+            this.$infoToggle = this.$element.find('.slot-info-toggle button');
 
             this.sounds = setup.sounds;
             this.backgroundSounds = setup.backgroundSounds;
@@ -21,11 +22,16 @@ define(['jquery'], function($) {
             this.slots = 10;
             this.defaultSlotDuration = 5;
 
+            this.$infoToggle.on('click', function() {
+                self.$element.find('.slot-info').slideToggle();
+            });
+
             this.$preview.on('click', function(e) {
                 self.preview();
             });
-            this.$save.on('click', function(e) {
 
+            this.$save.on('click', function(e) {
+                self.save();
             });
 
             return this;
@@ -43,6 +49,7 @@ define(['jquery'], function($) {
                         var $this = $(this);
 
                         var $audio = $this.parent().find('audio');
+                        self.currentAmbient = ambient.file;
 
                         $audio.attr('src', ambient.file);
                         $audio.get(0).currentTime = 0;
@@ -190,6 +197,15 @@ define(['jquery'], function($) {
                 playBlock();
             }
 
+        },
+        save: function() {
+            var self = this;
+            var payload = {
+                ambient: self.currentAmbient,
+                sounds: self.serialize()
+            };
+
+            console.log(payload);
         }
     };
 

@@ -4,6 +4,8 @@ define(['jquery', 'jquery-ui'], function($) {
             this.setup = setup;
 
             this.$element = setup.$element;
+            this.$boxes = this.$element.find('.boxes');
+
             this.$buttonBoxes = this.$element.find('.buttons');
 
             this.boxes = setup.boxes;
@@ -44,7 +46,7 @@ define(['jquery', 'jquery-ui'], function($) {
                 });
 
 
-                $box.appendTo(self.$element);
+                $box.appendTo(self.$boxes);
             });
         }
     };
