@@ -63,12 +63,3 @@ require(['jquery', 'Canvas', 'Player'], function($, Canvas, Player) {
     });
 
 });
-
-// Canvas (element, boxes, sounds, dropCallback)
-//  X build - Create elements
-
-// Player (element, sounds, backgroundSounds)
-//  X build - create elements
-//  X checkFinished - checks if the player is full and show/hide the share buttons
-//  X serialize - generate a json to send to server
-//  - preview - plays the sounds
