@@ -60,8 +60,6 @@ define(['jquery', 'sound'], function($, sound) {
                         var $audio = $this.parent().find('audio');
                         self.currentAmbient = ambient.file;
 
-                        console.log(sound(ambient.file));
-
                         $audio.attr('src', sound(ambient.file));
 
                         setTimeout(function() {
@@ -88,7 +86,6 @@ define(['jquery', 'sound'], function($, sound) {
                     var $slot = $slotBox.find('.slot');
                     var $slotInfo = $slotBox.find('.slot-info');
 
-                    console.log($slot);
                     $slot.data('sound', null);
                     $slot.removeClass().addClass('slot');
 
