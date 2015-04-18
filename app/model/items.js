@@ -22,3 +22,15 @@ exports.saveitem = function getItem(data, callback) {
         callback(null, item);
     });
 };
+
+exports.countitems = function getItem(callback) {
+    var Item = mongoose.model('Item');
+    Item.count({}, function(err, n) {
+        if (err) {
+            console.log(err);
+            return callback(err);
+        }
+        console.log(n);
+        callback(null, n);
+    });
+};

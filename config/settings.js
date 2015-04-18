@@ -4,6 +4,7 @@ var path = require('path');
 var config = {
     dbuser: '',
     dbpass: '',
+    dburl: '',
     locale: 'es',
     path: path.join(__dirname, '..'),
     session: {
