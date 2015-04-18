@@ -93,6 +93,12 @@ module.exports = function(grunt) {
                     modules: [{
                         name: 'main',
                         include: ['../../src/vendor/requirejs/require.js']
+                    }, {
+                        name: 'app/builder',
+                        exclude: ['main']
+                    }, {
+                        name: 'app/preview',
+                        exclude: ['main']
                     }]
                 }
             }
@@ -138,13 +144,13 @@ module.exports = function(grunt) {
         },
         notify_hooks: {
             options: {
-              enabled: true,
-              max_jshint_notifications: 5,
-              title: "City Symphony",
-              success: true,
-              duration: 3
+                enabled: true,
+                max_jshint_notifications: 5,
+                title: "City Symphony",
+                success: true,
+                duration: 3
             }
-          }
+        }
     });
 
 
