@@ -1,16 +1,58 @@
-.canvas {
-    width: 100%;
+.app {
 
-    .box {
-        width: 100px;
-        height: 200px;
-        background: #eee;
-        margin: 10px;
-        cursor: pointer;
+    .canvas {
+        
+        text-align: center;
+        
+        header {
+            
+        }
+        .canvas-body {
+            
+
+            .boxes {
+
+                width: 100%;
+                float: left;
+                
+
+                .box {
+                    float: left;
+                    width: 20%;
+                    height: 200px;
+                    background: #eee;
+                    margin: 10px;
+                    cursor: pointer;
+                    
+                }
+
+            }
+            .buttons {
+
+                float: left;
+                width: 100%;
+
+                .button-box {
+                    text-align: center;
+                    width: 20%;
+                }
+                
+            }
+
+        }
+
     }
 
+    .player {
+        width: 100%;
+        float: left;
+        background-color: #333;
+
+    }
 
 }
+
+
 
 .drop-active {
     border: 3px solid #999;
@@ -58,4 +100,10 @@
 
 .hidden {
     display: none;
+}
+
+button {
+    background-color: black;
+    padding: 5px;
+    color: #fff;
 }
