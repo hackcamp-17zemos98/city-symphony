@@ -205,6 +205,18 @@ define(['jquery'], function($) {
                 sounds: self.serialize()
             };
 
+            $.$.ajax({
+                method: 'POST',
+                data: payload
+            })
+            .done(function(data) {
+                console.log(data);
+            })
+            .fail(function(xhr, status, error){
+                throw new Error(error);
+            });
+
+
             console.log(payload);
         }
     };
