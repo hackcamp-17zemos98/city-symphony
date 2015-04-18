@@ -19,7 +19,7 @@ define(['jquery'], function($) {
             this.sounds = setup.sounds;
             this.backgroundSounds = setup.backgroundSounds;
 
-            this.slots = 10;
+            this.slots = 5;
             this.defaultSlotDuration = 5;
 
             this.$infoToggle.on('click', function() {
@@ -151,7 +151,7 @@ define(['jquery'], function($) {
             }).get();
         },
         checkFinished: function() {
-            if(this.serialize().length === 10) {
+            if(this.serialize().length === this.slots) {
                 this.$save.prop('disabled', false);
             } else {
                 this.$save.prop('disabled', true);
@@ -215,9 +215,6 @@ define(['jquery'], function($) {
             .fail(function(xhr, status, error){
                 throw new Error(error);
             });
-
-
-            console.log(payload);
         }
     };
 
