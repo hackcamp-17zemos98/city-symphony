@@ -1,1 +1,42 @@
-{}
+[
+    {
+        "mp4": "/video/1.mov.mp4",
+        "webm": "/video/1.mov.webm"
+    },
+    {
+        "mp4": "/video/2.mov.mp4",
+        "webm": "/video/2.mov.webm"
+    },
+    {
+        "mp4": "/video/3.mov.mp4",
+        "webm": "/video/3.mov.webm"
+    },
+    {
+        "mp4": "/video/4.mov.mp4",
+        "webm": "/video/4.mov.webm"
+    },
+    {
+        "mp4": "/video/5.mov.mp4",
+        "webm": "/video/5.mov.webm"
+    },
+    {
+        "mp4": "/video/6.mov.mp4",
+        "webm": "/video/6.mov.webm"
+    },
+    {
+        "mp4": "/video/7.mov.mp4",
+        "webm": "/video/7.mov.webm"
+    },
+    {
+        "mp4": "/video/8.mov.mp4",
+        "webm": "/video/8.mov.webm"
+    },
+    {
+        "mp4": "/video/9.mov.mp4",
+        "webm": "/video/9.mov.webm"
+    },
+    {
+        "mp4": "/video/10.mov.mp4",
+        "webm": "/video/10.mov.webm"
+    }
+]

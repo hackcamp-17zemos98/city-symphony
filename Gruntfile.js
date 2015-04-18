@@ -16,6 +16,12 @@ module.exports = function(grunt) {
                 cwd: 'static/src/audio/',
                 src: ['**'],
                 dest: 'static/dist/audio/'
+            },
+            video: {
+                expand: true,
+                cwd: 'static/src/video/',
+                src: ['**'],
+                dest: 'static/dist/video/'
             }
         },
         sync: {
@@ -41,6 +47,13 @@ module.exports = function(grunt) {
                     cwd: 'static/src/audio/',
                     src: '**',
                     dest: 'static/dist/audio/'
+                }]
+            },
+            video: {
+                files: [{
+                    cwd: 'static/src/video/',
+                    src: '**',
+                    dest: 'static/dist/video/'
                 }]
             },
             vendor: {

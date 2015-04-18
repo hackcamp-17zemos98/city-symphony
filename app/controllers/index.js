@@ -6,7 +6,7 @@ var helpers = require('../lib/helpers');
 module.exports = {
     index: function(req, res, next) {
         res.render('home', {
-            jsApp: 'builder',
+            app: 'builder',
             meta: {
                 title: 'Build a City Symphony'
             }
@@ -21,12 +21,14 @@ module.exports = {
         });
     },
     shareSymphony: function(req, res, next) {
+        var videos = require('../../data/backgrounds.json');
         res.render('preview', {
-            jsApp: 'preview',
+            app: 'preview',
             meta: {
                 title: 'Your City Symphony'
             },
-            id: req.params.id
+            id: req.params.id,
+            videos: videos
         });
     },
     postSymphony: function(req, res, next) {
@@ -40,7 +42,7 @@ module.exports = {
     },
     help: function(req, res, next) {
         res.render('help', {
-            jsApp: 'help',
+            app: 'help',
             meta: {
                 title: 'Help'
             }

@@ -1,0 +1,176 @@
+.builder {
+
+    .sad {
+        background-color: red;
+    }
+    .normal {
+        background-color: orange;
+    }
+    .happy {
+        background-color: blue;
+    }
+    .happier {
+        background-color: green;
+    }
+
+    .canvas {
+        text-align: center;
+
+        .switcher {
+            background: url('../img/background.png');
+            background-repeat: no-repeat;
+            background-position: center bottom;
+
+            header {
+                h1{
+                    width: 352px;
+                    height: 168px;
+                    text-indent: -9999px;
+                    background: url('../img/logo.gif');
+                    margin: 10px auto;
+                }
+            }
+
+            .canvas-body {
+
+
+                .boxes {
+
+                    width: 100%;
+
+                    padding-top: 100px;
+                    float: left;
+
+                    .box {
+                        float: left;
+                        width: 20%;
+                        cursor: pointer;
+                        opacity: 0.5    ;
+
+                        &.active {
+                            opacity: 1;
+                        }
+
+                        div {
+                            width: 75%;
+                            margin: 0 auto;
+                        }
+
+                        img{
+                            max-width: 100%;
+                        }
+
+                    }
+
+                }
+            }
+
+        }
+
+        .buttons {
+
+            float: left;
+            width: 100%;
+            height: 100px;
+
+            .button-box {
+                text-align: center;
+                width: 340px;
+                margin: 0 auto;
+
+                .sound-box {
+                    width: 80px;
+                    height: 80px;
+                    margin: 10px 5px 0 0;
+                    display: inline-box;
+                    float: left;
+                    background-repeat: no-repeat;
+                    background-position: 7px 10px;
+                    text-indent: -9999px;
+                    cursor: move;
+                }
+
+                .sad {
+                    background-image: url('../img/4.png');
+                }
+                .normal {
+                    background-image: url('../img/3.png');;
+                }
+                .happy {
+                    background-image: url('../img/2.png');;
+                }
+                .happier {
+                    background-image: url('../img/1.png');;
+                }
+
+            }
+
+        }
+
+
+    }
+
+    .player {
+        width: 100%;
+        background-color: #333;
+        clear: both;
+
+        .timeline {
+            float: left;
+            width: 100%;
+        }
+        footer {
+            width: 100%;
+            text-align: center;
+
+            .sources {
+                float: left;
+            }
+            .background-sounds {
+
+            }
+            .action {
+                float: right;
+            }
+        }
+    }
+
+}
+
+
+
+.drop-active {
+    border: 3px solid #999;
+}
+
+
+.slot{
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+    float: left;
+    margin: 5px;
+}
+
+.slot-info {
+    display: none;
+}
+
+.clear-slot {
+    display: none;
+}
+
+.slot.full .clear-slot {
+    display: inline;
+}
+
+
+.hidden {
+    display: none;
+}
+
+button {
+    background-color: black;
+    padding: 5px;
+    color: #fff;
+}

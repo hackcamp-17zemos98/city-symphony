@@ -1,5 +1,6 @@
 {
-    "b1": {
+    "transport": {
+        "img": "/img/transport.png",
         "sounds": {
             "sad" : 1,
             "normal" : 2,
@@ -7,7 +8,8 @@
             "happier": 4
         }
     },
-    "b2": {
+    "people": {
+        "img": "/img/people.png",
         "sounds": {
             "sad" : 1,
             "normal" : 2,
@@ -15,7 +17,26 @@
             "happier": 4
         }
     },
-    "b3": {
+    "housing": {
+        "img": "/img/housing.png",
+        "sounds": {
+            "sad" : 1,
+            "normal" : 2,
+            "happy": 3,
+            "happier": 4
+        }
+    },
+    "nature": {
+        "img": "/img/nature.png",
+        "sounds": {
+            "sad" : 1,
+            "normal" : 2,
+            "happy": 3,
+            "happier": 4
+        }
+    },
+    "work": {
+        "img": "/img/work.png",
         "sounds": {
             "sad" : 1,
             "normal" : 2,

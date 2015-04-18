@@ -1,7 +1,21 @@
 <div class="app" data-src="{{id}}">
     <section class="canvas">
-        <video class="video-background" loop>
-        </video>
+        <div class="video-background">
+            {{#each videos}}
+                <video loop>
+                    <source src="{{mp4}}" type="video/mp4">
+                    <source src="{{webm}}" type="video/webm">
+                </video>
+            {{/each}}
+        </div>
+
+        <div class="video-info">
+
+        </div>
+
+        <div class="create">
+            <a href="/">Create your own symphony</a>
+        </div>
     </section>
 
     <audio class="audio-slots"></audio>

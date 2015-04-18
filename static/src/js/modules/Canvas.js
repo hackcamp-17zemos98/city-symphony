@@ -18,11 +18,24 @@ define(['jquery', 'jquery-ui'], function($) {
 
             $.each(this.boxes, function(id, box) {
                 var $box = $('<div>')
-                    .addClass('box ' + id)
+                    .addClass('box active ' + id)
                     .on('click', function(e) {
+                        self.$boxes.find('.box').removeClass('active');
+                        $(this).addClass('active');
+
                         self.$buttonBoxes.find('.button-box').addClass('hidden');
                         $popover.removeClass('hidden');
                     });
+
+                var $img = $('<img>').attr('src', box.img);
+                var $button = $('<div>')
+                    .addClass('button')
+                    .html(id);
+
+                $img.appendTo($box);
+                $button.appendTo($box);
+
+                $box.appendTo(self.$boxes);
 
                 var $popover = $('<div>')
                     .addClass('button-box hidden');
@@ -46,7 +59,6 @@ define(['jquery', 'jquery-ui'], function($) {
                 });
 
 
-                $box.appendTo(self.$boxes);
             });
         }
     };
