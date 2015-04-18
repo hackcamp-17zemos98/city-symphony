@@ -6,10 +6,12 @@ require.config({
          */
         'jquery': '../vendor/jquery/dist/jquery',
         'jquery-ui': '../vendor/jquery-ui/jquery-ui',
+        'modernizr': '../vendor/modernizr/modernizr',
         /**
          * Modules
          */
         'shared': 'modules/shared',
+        'sound': 'modules/sound',
         'Canvas': 'modules/Canvas',
         'Player': 'modules/Player',
         /**
@@ -24,6 +26,9 @@ require.config({
         },
         'jquery-ui': {
             'deps': ['jquery']
+        },
+        'modernizr': {
+            exports: 'Modernizr'
         }
     }
 });

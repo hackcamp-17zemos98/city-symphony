@@ -1,4 +1,4 @@
-define(['jquery'], function($) {
+define(['jquery', 'sound'], function($, sound) {
     var Player = {
         init: function(setup) {
             var self = this;
@@ -60,10 +60,15 @@ define(['jquery'], function($) {
                         var $audio = $this.parent().find('audio');
                         self.currentAmbient = ambient.file;
 
-                        $audio.attr('src', ambient.file);
-                        $audio.get(0).currentTime = 0;
-                        $audio.get(0).volume = 0.1;
-                        $audio.get(0).play();
+                        console.log(sound(ambient.file));
+
+                        $audio.attr('src', sound(ambient.file));
+
+                        setTimeout(function() {
+                            $audio.get(0).currentTime = 0;
+                            $audio.get(0).volume = 0.1;
+                            $audio.get(0).play();
+                        }, 50);
 
                     })
                     .appendTo(self.$ambients);
@@ -184,11 +189,14 @@ define(['jquery'], function($) {
                         $active.removeClass('drop-active');
                         $current.addClass('drop-active');
 
-                        self.$player.attr('src', currentData.file);
+                        self.$player.attr('src', sound(currentData.file));
 
                         var player = self.$player.get(0);
-                        player.currentTime = 0;
-                        player.play();
+
+                        setTimeout(function() {
+                            player.currentTime = 0;
+                            player.play();
+                        }, 50);
 
                         self.$player.one('ended', function() {
                             current++;

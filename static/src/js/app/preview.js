@@ -1,4 +1,4 @@
-require(['jquery'], function($) {
+require(['jquery', 'sound'], function($, sound) {
 
     $.fn.random = function() {
         return this.eq(Math.floor(Math.random() * this.length));
@@ -38,11 +38,13 @@ require(['jquery'], function($) {
                 if (i < soundsLength) {
                     var current = self.data.sounds[i];
 
-                    self.$audio.attr('src', current.file);
+                    self.$audio.attr('src', sound(current.file));
 
                     var audio = self.$audio.get(0);
-                    audio.currentTime = 0;
-                    audio.play();
+                    setTimeout(function() {
+                        audio.currentTime = 0;
+                        audio.play();
+                    }, 50);
 
                     var $info = $('<div>')
                         .addClass('info-box');
@@ -79,11 +81,13 @@ require(['jquery'], function($) {
 
             playBlock();
 
-            self.$ambient.attr('src', this.data.ambient || '/audio/background/Strobetone.mp3');
+            self.$ambient.attr('src', sound(this.data.ambient) || sound('/audio/background/Strobetone'));
 
             var ambient = self.$ambient.get(0);
-            ambient.currentTime = 0;
-            ambient.play();
+            setTimeout(function() {
+                ambient.currentTime = 0;
+                ambient.play();
+            }, 50);
         }
     };
 

@@ -1,14 +1,14 @@
 [
     {
-        "file": "/audio/background/DJ_Dolores.mp3",
+        "file": "/audio/background/DJ_Dolores",
         "name": "Ambient 1"
     },
     {
-        "file": "/audio/background/percuelect.mp3",
+        "file": "/audio/background/percuelect",
         "name": "Ambient 2"
     },
     {
-        "file": "/audio/background/Strobetone.mp3",
+        "file": "/audio/background/Strobetone",
         "name": "Ambient 3"
     }
 ]
