@@ -205,7 +205,7 @@ define(['jquery'], function($) {
                 sounds: self.serialize()
             };
 
-            $.$.ajax({
+            $.ajax({
                 method: 'POST',
                 data: payload
             })
