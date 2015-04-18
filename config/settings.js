@@ -2,6 +2,8 @@ var fs = require('fs');
 var path = require('path');
 
 var config = {
+    dbuser: '',
+    dbpass: '',
     locale: 'es',
     path: path.join(__dirname, '..'),
     session: {

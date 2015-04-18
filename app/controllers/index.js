@@ -28,12 +28,12 @@ module.exports = {
     },
     postSymphony: function(req, res, next) {
         var itemd = require('../model/items');
-        var content = 'F***ing demo content goes here!!!';
+        var content = JSON.stringify(req.body);
         itemd.saveitem(content, function(err, item) {
                 if (err) {
                     return next(err);
                 }
-                console.log('The item ID is: ' + item._id);
+                res.json({'id': item._id});
         });
     },
     help: function(req, res, next) {
