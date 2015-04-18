@@ -6,4 +6,4 @@ var itemSchema = new mongoose.Schema({
   content: String
 });
 mongoose.model('Item', itemSchema);
-mongoose.connect('mongodb://'+settings.dbuser+':'+settings.dbpass+'@ds061611.mongolab.com:61611/citysymphony');
+mongoose.connect('mongodb://'+settings.dbuser+':'+settings.dbpass+'@'+settings.dburl);
