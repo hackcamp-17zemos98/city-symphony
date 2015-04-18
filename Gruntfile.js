@@ -141,15 +141,6 @@ module.exports = function(grunt) {
                 ],
                 tasks: ['sync', 'concat']
             }
-        },
-        notify_hooks: {
-            options: {
-                enabled: true,
-                max_jshint_notifications: 5,
-                title: "City Symphony",
-                success: true,
-                duration: 3
-            }
         }
     });
 
@@ -163,10 +154,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-sync');
-    grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-contrib-concat');
 
-    grunt.task.run('notify_hooks');
 
     grunt.registerTask('dev', ['jshint', 'clean', 'sass', 'sync', 'concat', 'express', 'watch']);
     grunt.registerTask('default', ['jshint', 'clean', 'sass', 'copy', 'requirejs']);
