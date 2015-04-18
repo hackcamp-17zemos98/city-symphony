@@ -13,13 +13,15 @@ define(['jquery'], function($) {
             this.$preview = this.$element.find('.preview');
             this.$save = this.$element.find('.save');
 
+            this.$end = this.$element.find('.end');
+
             this.$player = this.$element.find('.audio-preview');
             this.$infoToggle = this.$element.find('.slot-info-toggle button');
 
             this.sounds = setup.sounds;
             this.backgroundSounds = setup.backgroundSounds;
 
-            this.slots = 10;
+            this.slots = 5;
 
             this.$infoToggle.on('click', function() {
                 $(this).toggleClass('active');
@@ -32,6 +34,10 @@ define(['jquery'], function($) {
 
             this.$save.on('click', function(e) {
                 self.save();
+            });
+
+            this.$end.find('.close').on('click', function() {
+                self.$end.addClass('hidden');
             });
 
             return this;
@@ -56,6 +62,7 @@ define(['jquery'], function($) {
 
                         $audio.attr('src', ambient.file);
                         $audio.get(0).currentTime = 0;
+                        $audio.get(0).volume = 0.1;
                         $audio.get(0).play();
 
                     })
@@ -213,7 +220,17 @@ define(['jquery'], function($) {
                 data: payload
             })
             .done(function(data) {
-                console.log(data);
+                var url =  window.location + 's/' + data.id;
+
+                var twitter_share = 'https://twitter.com/home?status=Check out my City Symphony ';
+                var facebook_share = 'https://www.facebook.com/sharer/sharer.php?u=';
+
+
+                self.$end.find('.url').val(url);
+                self.$end.find('.twitter').attr('href', twitter_share + url);
+                self.$end.find('.facebook').attr('href', facebook_share + url);
+
+                self.$end.removeClass('hidden');
             })
             .fail(function(xhr, status, error){
                 throw new Error(error);

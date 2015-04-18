@@ -31,11 +31,34 @@ body.preview {
         }
     }
 
-    .video-info {
+    footer {
         position: absolute;
-        width: 50%;
-        top: 5%;
+        bottom: 0;
+        padding: 1em 1em 3em 1em;
+        background: #fff;
+        width: 100%;
+
+        .video-info {
+            width: 99%;
+
+            .info-box {
+                width: 20%;
+                float: left;
+
+
+                a {
+                    color: #000;
+                    text-decoration: none;
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+
     }
+
 
     .create {
         position: absolute;

@@ -7,13 +7,22 @@ body {
     background: #000;
     border: none;
     color: #fff;
-    padding: 5px;
+    padding: 8px;
     text-transform: uppercase;
     border: 2px solid #fff;
+    text-decoration: none;
+
+    &:hover {
+        border: 2px solid #ccc;
+    }
 
     &.active {
         background: #fff;
         color: #000;
+    }
+
+    &.ico {
+        padding-left: 40px;
     }
 
     &:disabled {

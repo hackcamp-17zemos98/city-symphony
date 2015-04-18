@@ -50,7 +50,7 @@ require(['jquery'], function($) {
                     var $link = $('<a>').attr('href', current.url).attr('target', '_blank');
 
                     var $frame = $('<img>').attr('src', current.frame).appendTo($link);
-                    var $title = $('<p>').html('This sound is taken from: ' + current.video).appendTo($link);
+                    var $title = $('<p>').html('This sound is taken from: <strong>' + current.video + '</strong>').appendTo($link);
 
                     //video
                     self.$videos.random().fadeIn(function() {

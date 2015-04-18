@@ -37,6 +37,7 @@ module.exports = {
                 if (err) {
                     return next(err);
                 }
+
                 res.json({'id': item._id});
         });
     },
