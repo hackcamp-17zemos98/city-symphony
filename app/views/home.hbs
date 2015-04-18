@@ -1,5 +1,5 @@
 <div class="app">
-    <section class="canvas">
+    <section class="canvas clearfix">
         <div class="switcher clearfix">
             <header>
                 <h1>City Symphony</h1>
@@ -10,40 +10,39 @@
                 </div>
             </article>
         </div>
-        <footer class="buttons clearfix">
-            <p>Please choose one of the above themes</p>
+        <footer class="buttons">
+            <p class="intro">Please choose one of the above themes</p>
+            <p class="help hidden">Drag one of these buttons to the boxes below</p>
 
         </footer>
 
     </section>
 
-    <section class="player">
+    <section class="player clearfix">
         <audio class="audio-preview"></audio>
 
         <header class="timeline">
-            <nav class="slots">
+            <nav class="slots clearfix">
 
             </nav>
 
-            <div class="slot-info-toggle">
-                <button>Toggle info</button>
-            </div>
+
         </header>
 
-        <footer>
-            <div class="sources">
-                Sound sources
+        <footer class="clearfix">
+            <div class="block slot-info-toggle">
+                <button class="button negative">Toggle info</button>
             </div>
 
-            <div class="background-sounds">
+            <div class="block background-sounds">
                 <div class="ambients">
                     <audio loop></audio>
                 </div>
             </div>
 
-            <div class="action">
-                <button class="preview">Listen</button>
-                <button class="save" disabled>Create</button>
+            <div class="last action">
+                <button class="button preview">Listen</button>
+                <button class="button save" disabled>Create</button>
             </div>
         </footer>
     </section>

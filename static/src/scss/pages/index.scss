@@ -1,16 +1,16 @@
-.builder {
+body.builder {
 
     .sad {
-        background-color: red;
+        background-color: red !important;
     }
     .normal {
-        background-color: orange;
+        background-color: orange !important;
     }
     .happy {
-        background-color: blue;
+        background-color: blue !important;
     }
     .happier {
-        background-color: green;
+        background-color: green !important;
     }
 
     .canvas {
@@ -45,7 +45,7 @@
                         float: left;
                         width: 20%;
                         cursor: pointer;
-                        opacity: 0.5    ;
+                        opacity: 0.5;
 
                         &.active {
                             opacity: 1;
@@ -71,7 +71,19 @@
 
             float: left;
             width: 100%;
-            height: 100px;
+            height: 140px;
+
+            p.intro {
+                font-weight: 900;
+                color: #ccc;
+                font-size: 2em;
+            }
+
+            p.help {
+                font-weight: 900;
+                color: #ccc;
+                margin-bottom: 0;
+            }
 
             .button-box {
                 text-align: center;
@@ -112,65 +124,97 @@
 
     .player {
         width: 100%;
-        background-color: #333;
-        clear: both;
+        background-color: #000;
+
+        padding: 1em 0 3em 0;
 
         .timeline {
-            float: left;
-            width: 100%;
+            width: 99%;
+            margin: 0 auto;
+
+            .slots {
+                .slot-box{
+                    width: 10%;
+                    float: left;
+                    overflow: hidden;
+
+                    .slot {
+
+                        &.drop-active {
+                            border: 3px solid #999;
+                        }
+
+                        .clear-slot {
+                            display: none;
+                            background: transparent;
+                            float:right;
+                            border: none;
+                            font-size: 2.5em;
+                            font-weight: 100;
+                            color: #fff;
+                            outline: none;
+                        }
+
+
+                        &.full {
+                            .clear-slot {
+                                display: inline;
+                            }
+                        }
+
+
+                        height: 60px;
+                        background: #ccc;
+                        border: 4px solid #333;
+                        box-sizing: border-box;
+                    }
+
+                    .slot-info {
+                        display: none;
+                        font-size: .8em;
+                        width: 100%;
+                        padding: 4px;
+
+                        img {
+                            max-width: 100%;
+                        }
+
+                        p {
+                            margin: 0;
+                        }
+
+                        a {
+                            color: #fff;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
         }
+
         footer {
-            width: 100%;
-            text-align: center;
+            width: 99%;
+            margin: 0 auto;
+            padding: 4px;
+            box-sizing: border-box;
 
-            .sources {
-                float: left;
+            .block {
+                float:left;
+                width: 33%;
             }
+
             .background-sounds {
+                text-align: center;
 
+                button {
+                    margin: 0 5px;
+                }
             }
-            .action {
+
+            .last {
                 float: right;
             }
         }
     }
 
-}
-
-
-
-.drop-active {
-    border: 3px solid #999;
-}
-
-
-.slot{
-    width: 100px;
-    height: 100px;
-    background: #ccc;
-    float: left;
-    margin: 5px;
-}
-
-.slot-info {
-    display: none;
-}
-
-.clear-slot {
-    display: none;
-}
-
-.slot.full .clear-slot {
-    display: inline;
-}
-
-
-.hidden {
-    display: none;
-}
-
-button {
-    background-color: black;
-    padding: 5px;
-    color: #fff;
 }

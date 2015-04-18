@@ -19,10 +19,10 @@ define(['jquery'], function($) {
             this.sounds = setup.sounds;
             this.backgroundSounds = setup.backgroundSounds;
 
-            this.slots = 5;
-            this.defaultSlotDuration = 5;
+            this.slots = 10;
 
             this.$infoToggle.on('click', function() {
+                $(this).toggleClass('active');
                 self.$element.find('.slot-info').slideToggle();
             });
 
@@ -42,11 +42,14 @@ define(['jquery'], function($) {
             //TODO callback to edit result JSON
             $.each(this.backgroundSounds, function(i, ambient) {
                 $('<button>')
-                    .addClass('ambient-switch')
+                    .addClass('ambient-switch button')
                     .data('file', ambient.file)
                     .text(ambient.name)
                     .on('click', function(e) {
                         var $this = $(this);
+
+                        self.$ambients.find('button').removeClass('active');
+                        $this.addClass('active');
 
                         var $audio = $this.parent().find('audio');
                         self.currentAmbient = ambient.file;
@@ -60,7 +63,7 @@ define(['jquery'], function($) {
             });
 
             //Start first
-            // this.$ambients.find('button').first().trigger('click');
+            this.$ambients.find('button').first().trigger('click');
 
             //Slots
             //

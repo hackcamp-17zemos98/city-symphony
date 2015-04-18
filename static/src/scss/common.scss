@@ -1,12 +1,33 @@
+body {
+    font-family: Lato;
+    min-width: 700px;
+}
+
 .button {
     background: #000;
     border: none;
     color: #fff;
     padding: 5px;
     text-transform: uppercase;
+    border: 2px solid #fff;
+
+    &.active {
+        background: #fff;
+        color: #000;
+    }
+
+    &:disabled {
+        color: #ccc;
+        border: 2px solid #ccc;
+    }
 }
 
 .clearfix {
     overflow: auto;
     zoom: 1;
+}
+
+
+.hidden {
+    display: none;
 }

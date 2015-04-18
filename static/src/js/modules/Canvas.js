@@ -20,8 +20,12 @@ define(['jquery', 'jquery-ui'], function($) {
                 var $box = $('<div>')
                     .addClass('box active ' + id)
                     .on('click', function(e) {
+
                         self.$boxes.find('.box').removeClass('active');
                         $(this).addClass('active');
+                        self.$buttonBoxes.find('.intro').addClass('hidden');
+                        self.$buttonBoxes.find('.help').removeClass('hidden');
+
 
                         self.$buttonBoxes.find('.button-box').addClass('hidden');
                         $popover.removeClass('hidden');
