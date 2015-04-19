@@ -83,6 +83,7 @@ require(['jquery', 'sound'], function($, sound) {
 
             var ambient = self.$ambient.get(0);
             // ambient.currentTime = 0;
+            ambient.volume = 0.3;
             ambient.play();
         }
     };

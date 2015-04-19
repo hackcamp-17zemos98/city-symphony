@@ -1,5 +1,10 @@
 body.builder {
 
+    .fade {
+        opacity: 0;
+        transition: opacity 2s;
+    }
+
     .sad {
         background-color: red !important;
     }
@@ -15,6 +20,20 @@ body.builder {
 
     .canvas {
         text-align: center;
+
+        .initial {
+            width: 600px;
+            margin: 0 auto 30px auto;
+            font-size: 1.2em;
+
+            .scroll {
+                margin: 50px auto 0 auto;
+                width: 150px;
+                text-transform: uppercase;
+                padding-bottom: 40px;
+                background: url('../img/scroll.png') center bottom no-repeat;
+            }
+        }
 
         .switcher {
             background: url('../img/background.png');
@@ -32,7 +51,6 @@ body.builder {
             }
 
             .canvas-body {
-
 
                 .boxes {
 
@@ -278,6 +296,9 @@ body.builder {
                     }
                     &.facebook {
                         background-image: url('../img/facebook.png');
+                    }
+                    &.facebook {
+                        background-image: url('../img/link.png');
                     }
                 }
             }

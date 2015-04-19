@@ -230,6 +230,7 @@ define(['jquery', 'sound'], function($, sound) {
                 self.$end.find('.url').val(url);
                 self.$end.find('.twitter').attr('href', twitter_share + url);
                 self.$end.find('.facebook').attr('href', facebook_share + url);
+                self.$end.find('.link').attr('href', url);
 
                 self.$end.removeClass('hidden');
             })

@@ -45,6 +45,12 @@ require(['jquery', 'Canvas', 'Player'], function($, Canvas, Player) {
                     .build();
             });
 
+            $(window).one('scroll', function(e) {
+                self.$element.find('.initial').slideUp(2000);
+                self.$element.find('.fade').css('opacity', 1);
+
+            });
+
 
         }
     };
