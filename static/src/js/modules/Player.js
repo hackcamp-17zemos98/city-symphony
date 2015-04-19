@@ -62,11 +62,9 @@ define(['jquery', 'sound'], function($, sound) {
 
                         $audio.attr('src', sound(ambient.file));
 
-                        setTimeout(function() {
-                            $audio.get(0).currentTime = 0;
-                            $audio.get(0).volume = 0.1;
-                            $audio.get(0).play();
-                        }, 50);
+                        // $audio.get(0).currentTime = 0;
+                        $audio.get(0).volume = 0.1;
+                        $audio.get(0).play();
 
                     })
                     .appendTo(self.$ambients);
@@ -190,10 +188,8 @@ define(['jquery', 'sound'], function($, sound) {
 
                         var player = self.$player.get(0);
 
-                        setTimeout(function() {
-                            player.currentTime = 0;
-                            player.play();
-                        }, 50);
+                        // player.currentTime = 0;
+                        player.play();
 
                         self.$player.one('ended', function() {
                             current++;

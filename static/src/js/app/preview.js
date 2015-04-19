@@ -41,10 +41,8 @@ require(['jquery', 'sound'], function($, sound) {
                     self.$audio.attr('src', sound(current.file));
 
                     var audio = self.$audio.get(0);
-                    setTimeout(function() {
-                        audio.currentTime = 0;
-                        audio.play();
-                    }, 50);
+                    // audio.currentTime = 0;
+                    audio.play();
 
                     var $info = $('<div>')
                         .addClass('info-box');
@@ -84,10 +82,8 @@ require(['jquery', 'sound'], function($, sound) {
             self.$ambient.attr('src', sound(this.data.ambient) || sound('/audio/background/Strobetone'));
 
             var ambient = self.$ambient.get(0);
-            setTimeout(function() {
-                ambient.currentTime = 0;
-                ambient.play();
-            }, 50);
+            // ambient.currentTime = 0;
+            ambient.play();
         }
     };
 
