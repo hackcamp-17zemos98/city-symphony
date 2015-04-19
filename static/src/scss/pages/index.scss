@@ -250,6 +250,23 @@ body.builder {
                 }
             }
         }
+
+        .credits {
+            text-align: center;
+            margin: 50px auto 60px auto;
+            width: 700px;
+            color: #ccc;
+            font-size: .9em;
+            line-height: 170%;
+
+            a {
+                color: #eee;
+            }
+
+            .social {
+                margin-top: 40px;
+            }
+        }
     }
 
     .end {
