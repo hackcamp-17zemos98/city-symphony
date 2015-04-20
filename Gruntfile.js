@@ -22,6 +22,12 @@ module.exports = function(grunt) {
                 cwd: 'static/src/video/',
                 src: ['**'],
                 dest: 'static/dist/video/'
+            },
+            normalize: {
+                expand: true,
+                cwd: 'static/src/vendor/normalize.css/',
+                src: ['normalize.css'],
+                dest: 'static/dist/vendor/normalize.css/'
             }
         },
         sync: {
@@ -144,8 +150,6 @@ module.exports = function(grunt) {
         }
     });
 
-
-
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-express-server');
@@ -156,8 +160,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-sync');
     grunt.loadNpmTasks('grunt-contrib-concat');
 
-
     grunt.registerTask('dev', ['jshint', 'clean', 'sass', 'sync', 'concat', 'express', 'watch']);
     grunt.registerTask('default', ['jshint', 'clean', 'sass', 'copy', 'requirejs']);
-
 };
