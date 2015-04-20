@@ -13,8 +13,8 @@ var routeManager = function(env) {
      */
 
     router.use(function(req, res, next) {
-       res.locals.app = 'Example web';
-       next();
+        res.locals.app = 'Example web';
+        next();
     });
 
     /**
@@ -34,12 +34,9 @@ var routeManager = function(env) {
 
     router.get('/numsymphonies', controllers.numSymphonies);
 
-    // Help
-    router.get('/help', controllers.help);
-
     //JSON Static
     Object.keys(data).forEach(function(d) {
-        router.get('/data/' + d +'.json', function(req, res) {
+        router.get('/data/' + d + '.json', function(req, res) {
             res.json(data[d]);
         });
     });
@@ -58,7 +55,7 @@ var routeManager = function(env) {
     router.use(function(err, req, res, next) {
         var status = err.status || 500;
 
-        if(!Array.isArray(err)) {
+        if (!Array.isArray(err)) {
             err = [err];
         }
         res.status(status);
